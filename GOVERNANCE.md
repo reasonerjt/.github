@@ -33,17 +33,19 @@ The current maintainers are listed in [MAINTAINERS.md](https://github.com/velero
 
 #### Becoming a maintainer
 
-Contributors who have shown a sustained history of quality contributions to the project, code, code reviews, issue triage, proposal authoring and discussion, and community participation, may be nominated to become a maintainer. New maintainers must be nominated by an existing maintainer and must be elected by a supermajority of existing maintainers.
+Contributors who have shown a sustained history of quality contributions to the project, code, code reviews, issue triage, proposal authoring and discussion, and community participation, may be nominated by an existing maintainer to become a maintainer. New maintainers must be elected through a supermajority vote using the procedure in [Decision Making](#decision-making).
+
+After election, the nominating maintainer coordinates onboarding. They ensure that MAINTAINERS.md and applicable ownership and review-routing records are updated, and introduce the new maintainer to the project's review, release, support, and security procedures. A maintainer with GitHub organization administration permissions implements the approved GitHub access changes, while the relevant service administrators grant other access appropriate to the role. The nominating maintainer verifies completion and records it in the nomination issue or pull request.
 
 #### Stepping down and emeritus status
 
-A maintainer may step down at any time by notifying the other maintainers, and is then moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md). A maintainer who has been inactive in the project for an extended period (for example, six months) may be moved to emeritus status by a supermajority of the existing maintainers. Emeritus maintainers are recognized for their past contributions and may return to active maintainer status through the nomination process above.
+A maintainer may step down at any time by notifying the other maintainers, and is then moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md).  A maintainer who has been inactive in the project for an extended period (for example, six months) may be moved to emeritus status through a supermajority vote using the procedure in [Decision Making](#decision-making). Emeritus maintainers are recognized for their past contributions and may return to active maintainer status through the nomination process above.
 
 #### Removing a maintainer
 
-Maintainers may voluntarily step down as described above. A maintainer may also be removed involuntarily when the responsibilities and requirements of the role are not being met. This may include a repeated pattern of inactivity, an extended period of inactivity, a sustained failure to meet the responsibilities of the role, or a violation of the [Code of Conduct](#code-of-conduct). Involuntary removal protects the health of the project and its deliverables, and opens up opportunities for new contributors to step in.
+Maintainers may voluntarily step down as described above. A maintainer may also be removed involuntarily when the responsibilities and requirements of the role are not being met. This may include a repeated pattern of inactivity, an extended period of inactivity, a sustained failure to meet the responsibilities of the role, or a violation of the [Code of Conduct](#code-of-conduct). Involuntary removal protects the health of the project and its deliverables, and opens up opportunities for new contributors to step in. Involuntary removal is decided through a supermajority vote using the procedure in [Decision Making](#decision-making).
 
-Involuntary removal is decided by a supermajority of the existing maintainers. When a maintainer is removed, their elevated access and permissions (for example GitHub, release, and infrastructure access) are revoked, and they are moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md), or removed from it entirely in the case of removal for a Code of Conduct violation. Conduct-related concerns may also be reported to and handled through the [Code of Conduct](#code-of-conduct) contacts, independent of this process. A maintainer moved to emeritus status may return to active maintainer status through the nomination process above.
+When a maintainer steps down or is removed, their elevated access and permissions (for example GitHub, release, and infrastructure access) are revoked, and they are moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md), or removed from it entirely in the case of removal for a Code of Conduct violation. Conduct-related concerns may also be reported to and handled through the [Code of Conduct](#code-of-conduct) contacts, independent of this process. A maintainer moved to emeritus status may return to active maintainer status through the nomination process above.
 
 #### Maintainer affiliations
 
@@ -51,32 +53,49 @@ Maintainers must keep their affiliation in [MAINTAINERS.md](https://github.com/v
 
 ### Function-based Teams
 
-Velero does not currently operate standing function-based sub-teams. Security vulnerability response is handled by the Velero Security Team as described in [SECURITY.md](./SECURITY.md), which documents the team's responsibilities and the report handling and triage process. Should the project establish additional role- or function-based teams in the future, their membership and their onboarding and offboarding processes will be documented here.
+Velero does not currently operate standing function-based sub-teams.
+
+The Velero Security Team consists of all active maintainers listed in
+[MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md).
+Security Team membership follows the maintainer lifecycle described
+above: newly elected maintainers join the team, and maintainers who
+step down, become emeritus, or are removed leave the team.
+
+As part of maintainer onboarding and offboarding, the relevant service
+administrators grant or revoke access to the private security mailing
+list and vulnerability-reporting tools. The maintainer coordinating
+the transition verifies that these access changes are complete.
+
+The team's responsibilities and vulnerability-handling procedures are
+documented in [SECURITY.md](./SECURITY.md). Any additional function-based
+teams will have their membership, responsibilities, and onboarding and
+offboarding processes documented here.
 
 ### Supermajority
 
-A supermajority is defined as two-thirds of members in the group.
-A supermajority of [Maintainers](#maintainers) is required for certain
-decisions as outlined above. A supermajority vote is equivalent to the number of votes in favor being at least twice the number of votes against. For example, if you have 5 maintainers, a supermajority vote is 4 votes. Voting on decisions can happen on the mailing list, GitHub, Slack, email, or via a voting service, when appropriate. Maintainers can either vote "agree, yes, +1", "disagree, no, -1", or "abstain". A vote passes when supermajority is met. An abstain vote equals not voting at all.
+A supermajority requires affirmative votes from at least two-thirds of the yes/no votes cast, rounded up, after company aggregation as described in [Decision Making](#decision-making). Abstentions and nonparticipation are excluded from the denominator and do not prevent approval. There is no separate turnout quorum, but at least one yes/no vote must be cast for a decision to pass. For example, two yes votes, one no vote, and two abstentions meet the supermajority threshold.
+
+Voting on decisions can happen on the mailing list, GitHub, Slack, email, or via a voting service, when appropriate. Maintainers can vote "agree, yes, +1", "disagree, no, -1", or "abstain".
+
 
 ### Decision Making
 
 Ideally, all project decisions are resolved by consensus. If impossible, any
 maintainer may call a vote. Unless otherwise specified in this document, any
-vote will be decided by a supermajority of maintainers.
+vote will be decided by a [supermajority](#supermajority) using the procedure below.
 
-Votes by maintainers belonging to the same company
-will count as one vote; e.g., 4 maintainers employed by fictional company **Valerium** will
-only have **one** combined vote. If voting members from a given company do not
-agree, the company's vote is determined by a supermajority of voters from that
-company. If no supermajority is achieved, the company is considered to have
-abstained.
+Votes by maintainers belonging to the same company count as one combined vote; for example, four maintainers employed by fictional company **Valerium** have one combined vote. Each unaffiliated maintainer has one individual vote.
+
+A company's combined vote is yes or no when at least two-thirds of the yes/no votes cast by maintainers from that company support that position. Abstentions and nonparticipation are excluded from this calculation. If neither position reaches that threshold, or no yes/no votes are cast within the company, the company abstains.
+
+Only the resulting yes/no company votes and votes from unaffiliated maintainers count toward the final approval threshold. Companies that abstain or do not participate are excluded from that calculation.
+
 
 ## Proposal Process
 
 One of the most important aspects in any open source community is the concept
 of proposals. Large changes to the codebase and / or new features should be
-preceded by a proposal in our community repo. This process allows for all
+preceded by a proposal in the Velero repository. This process allows for all
 members of the community to weigh in on the concept (including the technical
 details), share their comments and ideas, and offer to help. It also ensures
 that members are not duplicating work or inadvertently stepping on toes by
@@ -89,11 +108,11 @@ recommendations on how to implement. In general, the community member(s)
 interested in implementing the proposal should be either deeply engaged in the
 proposal process or be an author of the proposal.
 
-The proposal should be documented as a separated markdown file pushed to the root of the 
+The proposal should be documented as a separate Markdown file pushed to the root of the 
 `design` folder in the [Velero](https://github.com/velero-io/velero/tree/main/design)
 repository via PR. The name of the file should follow the name pattern `<short
 meaningful words joined by '-'>_design.md`, e.g:
-`restore-hooks-design.md`.
+`restore-hooks_design.md`.
 
 Use the [Proposal Template](https://github.com/velero-io/velero/blob/main/design/_template.md) as a starting point.
 
@@ -130,22 +149,33 @@ Lazy consensus does _not_ apply to the process of:
 
 * Removal of maintainers from Velero
 
+Where this document explicitly requires a formal vote, that requirement
+takes precedence over lazy consensus. Abstentions and nonparticipation
+are handled according to the voting rules in [Decision Making](#decision-making).
+
 ## Deprecation Policy
 
 ### Deprecation Process
 
 Any contributor may introduce a request to deprecate a feature or an option of a feature by opening a feature request issue in the velero-io/velero GitHub project. The issue should describe why the feature is no longer needed or has become detrimental to Velero, as well as whether and how it has been superseded. The submitter should give as much detail as possible.
 
-Once the issue is filed, a one-month discussion period begins. Discussions take place within the issue itself as well as in the community meetings. The person who opens the issue, or a maintainer, should add the date and time marking the end of the discussion period in a comment on the issue as soon as possible after it is opened. A decision on the issue needs to be made within this one-month period.
+Once the issue is filed, a one-month discussion period begins.
+Discussions take place in the issue and community meetings. The
+submitter or a maintainer records the discussion period's closing
+date and time in the issue.
 
-The feature will be deprecated by a supermajority vote of 50% plus one of the project maintainers at the time of the vote tallying, which is 72 hours after the end of the community meeting that is the end of the comment period. (Maintainers are permitted to vote in advance of the deadline, but should hold their votes until as close as possible to hear all possible discussion.) Votes will be tallied in comments on the issue. 
+After the discussion period ends, a maintainer opens a formal vote
+using the procedure in [Decision Making](#decision-making) and publishes 
+the vote's closing date and time in the issue.  Deprecation requires a 
+supermajority under that procedure. Votes are recorded and tallied when 
+the vote closes.
 
 Non-maintainers may add non-binding votes in comments to the issue as well; these are opinions to be taken into consideration by maintainers, but they do not count as votes. 
 
 If the vote passes, the deprecation window takes effect in the subsequent release, and the removal follows the schedule. 
 
 ### Schedule
-If depreciation proposal passes by supermajority votes, the feature is deprecated in the next minor release and the feature can be removed completely after two minor version or equivalent major version e.g., if feature gets deprecated in Nth minor version, then feature can be removed after N+2 minor version or its equivalent if the major version number changes.
+If deprecation proposal passes by supermajority votes, the feature is deprecated in the next minor release and the feature can be removed completely after two minor versions or equivalent major version e.g., if feature gets deprecated in Nth minor version, then feature can be removed after N+2 minor version or its equivalent if the major version number changes.
 
 ### Deprecation Window
 
@@ -155,4 +185,4 @@ The deprecation window is the period from the release in which the deprecation t
 
 ## Updating Governance
 
-All substantive changes in Governance require a supermajority agreement by all maintainers.
+All substantive changes in Governance require a supermajority vote using the procedure in [Decision Making](#decision-making).
